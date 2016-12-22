@@ -1,0 +1,40 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "mcparse",
+    "creationTimestamp": null,
+    "annotations": {
+      "kompose.service.type": "LoadBalancer"
+    }
+  },
+  "spec": {
+    "replicas": 1,
+    "template": {
+      "metadata": {
+        "creationTimestamp": null,
+        "labels": {
+          "service": "mcparse"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "mcparse",
+            "image": "andersrye/parsey-mcparseface-server:latest",
+            "ports": [
+              {
+                "containerPort": 80,
+                "protocol": "TCP"
+              }
+            ],
+            "resources": {}
+          }
+        ],
+        "restartPolicy": "Always"
+      }
+    },
+    "strategy": {}
+  },
+  "status": {}
+}

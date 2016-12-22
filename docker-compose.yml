@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  mcparse:
+    image: andersrye/parsey-mcparseface-server:latest
+    ports:
+      - 7777:80
+    labels:
+      kompose.service.type: LoadBalancer

@@ -1,0 +1,31 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "mcparse",
+    "creationTimestamp": null,
+    "labels": {
+      "service": "mcparse"
+    },
+    "annotations": {
+      "kompose.service.type": "LoadBalancer"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "7777",
+        "protocol": "TCP",
+        "port": 7777,
+        "targetPort": 80
+      }
+    ],
+    "selector": {
+      "service": "mcparse"
+    },
+    "type": "LoadBalancer"
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}
