@@ -5,6 +5,7 @@
   "author": "Jesse Vander Does <jesse@htmlfusion.com>",
   "license": "MIT",
   "dependencies": {
+    "flat": "^2.0.1",
     "request": "^2.79.0",
     "yargs": "^6.5.0"
   }
