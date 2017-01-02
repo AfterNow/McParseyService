@@ -24,5 +24,13 @@ It can take a little while for the external address to show up
 
 ## Use
 
-curl -H "Content-Type:text/plain" -d "Bob brought the pizza to Alice." http://{PUBLIC_IP_ADDRESS}/
+### McParsey service 
+
+`curl -H "Content-Type:text/plain" -d "Bob brought the pizza to Alice." http://{PUBLIC_IP_ADDRESS}/`
+
+`./examples/basic-mcparsey.js --help`
+
+### Core NLP service
+
+`./examples/basic-corenlp.js --help`
 

@@ -1,9 +1,12 @@
-version: "2"
-
-services:
-  mcparse:
-    image: andersrye/parsey-mcparseface-server:latest
-    ports:
-      - 80:80
-    labels:
-      kompose.service.type: LoadBalancer
+mcparse:
+  image: andersrye/parsey-mcparseface-server:latest
+  ports:
+    - 8080:80
+  labels:
+    kompose.service.type: LoadBalancer
+corenlp:
+  image: motiz88/corenlp:3.6.0
+  ports:
+    - 8081:9000
+  labels:
+    kompose.service.type: LoadBalancer

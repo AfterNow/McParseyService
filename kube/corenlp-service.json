@@ -2,10 +2,10 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "mcparse",
+    "name": "corenlp",
     "creationTimestamp": null,
     "labels": {
-      "service": "mcparse"
+      "service": "corenlp"
     },
     "annotations": {
       "kompose.service.type": "LoadBalancer"
@@ -14,14 +14,14 @@
   "spec": {
     "ports": [
       {
-        "name": "8080",
+        "name": "8081",
         "protocol": "TCP",
         "port": 80,
-        "targetPort": 80
+        "targetPort": 9000
       }
     ],
     "selector": {
-      "service": "mcparse"
+      "service": "corenlp"
     },
     "type": "LoadBalancer"
   },
